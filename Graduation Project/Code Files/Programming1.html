@@ -1,0 +1,138 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Programming Study Materials</title>
+   <style>  
+/* Reset some default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('B5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+#subjects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.subject-container {
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.subject-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.subject-container a {
+  text-decoration: none;
+  color: #333;
+}
+
+.subject-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1.2;
+  transition: opacity 0.3s ease;
+}
+
+.subject-container:hover img {
+  opacity: 1.2;
+}
+
+.subject-container h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.logo {
+  position: absolute;
+top: 15px;
+left: 5px;
+width: 90px;
+height: 65px;
+background-image: url(logo-image2.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+  <div class="logo"></div>
+  <header>
+    <h1>Programming Study Materials</h1>
+  </header>
+
+  <div id="subjects">
+    <a href="python_tutorial.pdf" class="subject-container">
+      <img src="python_logo.jpg" alt="Python Logo">
+      <h2>Python</h2>
+    </a>
+    <a href="c_tutorial.pdf" class="subject-container">
+      <img src="C2.0.png" alt="C Logo">
+      <h2>C</h2>
+    </a>
+    <a href="java_tutorial.pdf" class="subject-container">
+      <img src="java_logo.jpg" alt="Java Logo">
+      <h2>Java</h2>
+    </a>
+    <a href="php.html" class="subject-container">
+      <img src="php_logo.jpg" alt="PHP Logo">
+      <h2>PHP</h2>
+    </a>
+    <a href="html.html" class="subject-container">
+      <img src="html_logo.jpg" alt="HTML Logo">
+      <h2>HTML</h2>
+    </a>
+    <a href="css.html" class="subject-container">
+      <img src="css_logo.webp" alt="CSS Logo">
+      <h2>CSS</h2>
+    </a>
+    <a href="javascript.html" class="subject-container">
+      <img src="javascript_logo.jpg" alt="JavaScript Logo">
+      <h2>JavaScript</h2>
+    </a>
+    <!-- Add more subject containers as needed -->
+  </div>
+</body>
+</html>
+

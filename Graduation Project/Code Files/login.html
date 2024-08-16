@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		body {
+			background-image: url('B2.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center top;
+			font-family: Arial, sans-serif;
+			color: darkblue;
+			margin-top: 70px; /* Added margin to push content below the header */
+		}
+
+		.head1 {
+			top: 46px;
+			font-size: 67px;
+			text-align: center;
+			color: darkblue;
+			position: absolute;
+			left: 444px;
+		}
+
+		label {
+			display: block;
+			font-size: 1.2em;
+			margin-bottom: 10px;
+		}
+
+		input[type=submit] {
+			background-color: darkgreen;
+			color: darkgreen;
+			padding: 10px;
+			font-size: 1.2em;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			width: 40px;
+		}
+
+		input[type=submit]:hover {
+			background-color: #188318;
+		}
+
+		.logo {
+			width: 80px;
+			height: auto;
+			display: block;
+			margin-right: 10px;
+		}
+
+		.header {
+			position: fixed; /* Changed position to fixed */
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			background-color: rgba(255, 255, 255, 0.8);
+			color: #000000;
+			padding: 10px;
+			z-index: 999; /* Increased z-index value */
+		}
+
+		.marquee {
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0.3);
+			left: 0;
+			padding: 5px;
+			margin-top: 100px; /* Added margin-top to create space below the header */
+			margin-bottom: 20px;
+			overflow: hidden;
+			position: relative; /* Added position */
+			z-index: 1; /* Added z-index to ensure visibility */
+		}
+
+		.marquee-text {
+			display: inline-block;
+			white-space: nowrap;
+			overflow: hidden;
+			animation: marquee 40s linear infinite;
+			animation-delay: -8s;
+		}
+
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+
+		.footer {
+			text-align: center; /* Modified to align center */
+			padding: 10px;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #ffffff;
+			position: fixed; /* Changed position to fixed */
+			bottom: 0;
+			left: 0; /* Added left property */
+			width: 100%;
+		}
+
+		.login-section {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 50px;
+		}
+
+		.teacher-login,
+		.student-login {
+			width: 266px;
+			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.3);
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			position: relative;
+			text-align: center;
+			color: black;
+		}
+
+		.teacher-login input[type=text],
+		.teacher-login input[type=password],
+		.student-login input[type=text],
+		.student-login input[type=password] {
+			width: 205px;
+			padding: 10px;
+			font-size: 1.2em;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 20px;
+			background-color: darkgreen;
+			color: #000000;
+			box-sizing: border-box;
+			border: 1px solid #fff;
+		}
+
+		.teacher-login input[type=submit],
+		.student-login input[type=submit] {
+			background-color: darkolivegreen;
+			color: black;
+			padding: 10px;
+			font-size: 1.2em;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			width: 95px;
+		}
+
+		.teacher-login input[type=submit]:hover,
+		.student-login input[type=submit]:hover {
+			background-color: #188318;
+		}
+
+		.teacher-login {
+			margin-right: 30px;
+		}
+
+		.student-login {
+			margin-left: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img src="logo-image2.png" alt="ShikshaVerse Logo" class="logo">
+		<h1>ShikshaVerse</h1>
+	</div>
+
+	<div class="marquee">
+		<div class="marquee-text">Elevate your learning experience with ShikshaVerse - the ultimate E-learning platform that not only helps build a solid foundation for your future but also unleashes your hidden talents through professional learning methodologies. Our customizable learning materials, comprehensive tests, and interactive interface empower students to reach their full potential.</div>
+	</div>
+
+	<div class="login-section">
+		<div class="teacher-login">
+			<form method="POST" action="Authenticate.php">
+				<h2>Teacher Login</h2>
+				<input type="text" id="Teacher-username" name="name" placeholder="Enter your name" required>
+				<input type="password" id="Teacher-password" name="pass" placeholder="Enter your password" required>
+				<input type="submit" name="submit" value="Login"><br>
+				Don't have an account?<br>
+				<a href="registration.html" class="login">Register</a>
+			</form>
+		</div>
+
+		<div class="student-login">
+			<form method="POST" action="Authenticate2.php">
+				<h2>Student Login</h2>
+				<input type="text" id="Student-username" name="name" placeholder="Enter your name" required>
+				<input type="password" id="Student-password" name="pass" placeholder="Enter your password" required>
+				<a href="sdashboard.php"><input type="submit" name="submit" value="Login"></a><br>
+				Don't have an account?<br>
+				<a href="registration.html" class="login">Register</a>
+			</form>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>ShikshaVerse &copy; 2023. All Rights Reserved.</p>
+	</div>
+</body>
+</html>

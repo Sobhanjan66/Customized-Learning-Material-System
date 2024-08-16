@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Materials</title>
+   
+  <link rel="stylesheet" type="text/css" href="smaterial.css">
+  <style>
+    .container {
+  width: 380px;
+  height: 390px;
+  margin: 50px 0 0 50px;
+  padding: 20px;
+  background-color:darkgreen;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  position: relative;
+  top: 10%;
+  left: 30%;
+}
+label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+input[type=text] {
+  display: inline-block;
+  align-self: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #0a0707;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+input[type=textarea]
+{
+  width: 371px;
+    height: 105px;
+
+}
+input[type=submit] {
+  position: absolute;
+  background-color: #c86224;
+  color: #fff;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  right: 13px;
+  bottom: 11px;
+}
+input[type=submit]:hover {
+  background-color: #188318;
+}
+.logo {
+			position: absolute;
+	top: 15px;
+    left: 5px;
+    width: 90px;
+    height: 65px;
+    background-image: url(logo-image2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+  </style>
+</head>
+<body>
+  <div class="logo"></div>
+  <header>
+    <h1>Study Materials</h1>
+  </header>
+  <div class="container">
+    <form method="POST" action="smaterial.php">
+      <h1>Upload Study Material</h1>
+      <label>Enter Topic name</label>
+      <input type="text" name='tname'placeholder="Topic name">
+      <label>Write Notes</label>
+      <input type="textarea" name='ttext'placeholder="Write Here">
+          
+          <input type="submit" name="submit" value="Submit">
+      </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Study Materials</title>
+  <style>
+    /* Reset some default styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+header {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+/*.back-button {
+            position: absolute;
+            top: 100px;
+            right: 3px;
+            background-color: #008000;
+            color: #ffffff;
+            font-size: 13px;
+            padding: 3px 3px;
+            border-radius: 10px;
+            text-decoration: none;
+            z-index: 9999;  
+        }*/
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+#categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.category {
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category a {
+  text-decoration: none;
+  color: #333;
+}
+
+.category img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.category:hover img {
+  opacity: 1;
+}
+
+.category h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+.logo {
+			position: absolute;
+    top: 15px;
+    left: 5px;
+    width: 90px;
+    height: 65px;
+    background-image: url(logo-image2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Set the background image using JavaScript */
+</style>
+</head>
+<body>
+  <div class="logo"></div>
+  <a href="sdashboard.php" style="position: absolute; top: 25px; right: 15px; z-index: 9999; color: #ffffff;">Back to dashboard</a>
+  <header>
+    <h1>Study Materials</h1>
+  </header>
+  <div id="categories">
+    <div class="category">
+      <a href="programming1.html">
+        <img src="" alt="Programming Logo" id="programming-image">
+        <h2>Programming</h2>
+      </a>
+    </div>
+    <div class="category">
+      <a href="mathematics.html">
+        <img src="" alt="Mathematics Logo" id="mathematics-image">
+        <h2>Mathematics</h2>
+      </a>
+    </div>
+    <div class="category">
+      <a href="science.html">
+        <img src="" alt="Science Logo" id="science-image">
+        <h2>Science</h2>
+      </a>
+    </div>
+  </div>
+  <script>
+    // Set the background images
+    document.body.style.backgroundImage = "url('B4.jpg')";
+    document.getElementById("programming-image").src = "Programming_logo.webp";
+    document.getElementById("mathematics-image").src = "Math_logo.jpg";
+    document.getElementById("science-image").src = "Science_logo.jpg";
+  </script>
+</body>
+</html>

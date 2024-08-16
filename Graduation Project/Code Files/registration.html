@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<style>
+		body {
+			background-image: url('B1.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center top;
+			font-family: Arial, sans-serif;
+			color: #000000;
+		}
+		h1 {
+			text-align: center;
+			color:red;
+		}
+		.container {
+			width: 400px;
+			margin: 7px 810px;
+			padding: 20px;
+			background-color: rgba(0,0,0,0.2);
+			border-radius: 10px;
+			box-shadow: 10 10 10px rgba(0,0,0,0.2);
+		}
+		.sub {
+			text-align: center;
+		}
+		label {
+			display: block;
+			font-size: 1.2em;
+			margin-bottom: 10px;
+		}
+		input[type=text],
+		input[type=email],
+		input[type=password],
+		input[type=tel] {
+			display: inline-block;
+			align-self: center;
+			width: 100%;
+			padding: 10px;
+			font-size: 1.2em;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 20px;
+			background-color: rgba(255, 255, 255, 0.7);
+			color: #000000;
+			box-sizing: border-box;
+			border: 1px solid #fff;
+		}
+		input[type=submit] {
+			background-color: purple;
+			color: #fff;
+			padding: 10px;
+			font-size: 1.2em;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			margin: 20px auto;
+			display: block;
+		}
+		input[type=submit]:hover {
+			background-color: #188318;
+		}
+		.logo {
+			width: 80px;
+			height: auto;
+			display: block;
+			margin-right: 10px;
+		}
+		.header {
+			display: flex;
+			align-items: center;
+			background-color: rgba(255, 255, 255, 0.8);
+			color: #000000;
+			padding: 3px;
+		}
+		.marquee {
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0.3);
+			padding: 5px;
+			margin-bottom: 20px;
+			overflow: hidden;
+		}
+		.marquee-text {
+			display: inline-block;
+			white-space: nowrap;
+			overflow: hidden;
+			animation: marquee 40s linear infinite;
+			animation-delay: -8s;
+		}
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+		.footer {
+			text-align: center;
+			padding: 15px;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #ffffff;
+		}
+		.container2 {
+			position: absolute;
+			left: 93px;
+			color:black;
+			top: 140px;
+			border-radius: 4px;
+			width: 599px;
+			font: revert;
+			background-color: rgba(255, 255, 255, 0.3);
+			backdrop-filter: blur(3px);
+			padding: 20px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.container2 h2 {
+			font-size: 38px;
+			color:darkslateblue;
+			margin-bottom: 10px;
+		}
+		.container2 p {
+			font-size: 17px;
+			font-family: 'Arial', sans-serif;
+			line-height: 1.6;
+			margin-bottom: 10px;
+		}
+		.container2 .first-word {
+			font-size: 38px;
+			color: darkslateblue;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img src="logo-image2.png" alt="ShikshaVerse Logo" class="logo">
+		<h1>ShikshaVerse</h1>
+	</div>
+
+	<div class="marquee">
+		<div class="marquee-text">Elevate your learning experience with ShikshaVerse - the ultimate E-learning platform that not only helps build a solid foundation for your future but also unleashes your hidden talents through professional learning methodologies. Our customizable learning materials, comprehensive tests, and interactive interface empower students to reach their full potential.</div>
+	</div>
+
+	<div class="container">
+		<form method="POST" action="register2.php">
+			<h1>Registration Form</h1>
+
+			<input type="text" name="username" placeholder="Enter your Name" required>
+			<input type="email" name="email" placeholder="Enter your Email" required>
+			<input type="password" name="password" placeholder="Enter your Password" required>
+			<input type="tel" name="mobile" placeholder="Enter your Mobile No." required>
+
+			<input type="submit" name="submit" value="Register">
+
+			<div class="sub">
+				Already have an account?<br>
+				<a href="login.html" class="login">Log in</a>
+			</div>
+		</form>
+	</div>
+
+	<div class="container2">
+		<p><span class="first-word">ShikshaVerse</span>is a vibrant and progressive educational institution dedicated to nurturing young minds and empowering them with knowledge and skills to thrive in the modern world.</p>
+		<p>At Shiksha Verse, we prioritize academic excellence and offer a comprehensive curriculum that combines traditional subjects with innovative teaching methodologies. Our highly qualified and passionate teachers create a stimulating learning environment, fostering intellectual curiosity, critical thinking, and a love for learning.</p>
+		<p>We understand the importance of holistic development, and thus, our school emphasizes co-curricular activities alongside academics. We offer a wide range of extracurricular programs including sports, arts, music, dance, and various clubs and societies. These activities encourage students to explore their interests, develop their talents, and build essential life skills such as teamwork, leadership, and perseverance.</p>
+	</div>
+
+	<div class="footer">
+		<p>ShikshaVerse &copy; 2023. All Rights Reserved.</p>
+	</div>
+</body>
+</html>

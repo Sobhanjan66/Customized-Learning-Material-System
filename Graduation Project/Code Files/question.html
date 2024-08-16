@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<style>
+		body {
+			background-image: url('B6.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center top;
+			font-family: Arial, sans-serif;
+			color: #040303;
+		}
+		h1 {
+			text-align: center;
+			/* font-size: 3em;
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 50px; */
+			color: snow;
+		}
+		.container {
+			width: 400px;
+            height: 703px;
+			margin: 50px 0 0 50px;
+			padding: 20px;
+			background-color:darkgreen;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			position: relative;
+			top: 5%;
+			left: 30%;
+		}
+		label {
+			display: block;
+			font-size: 1.2em;
+			margin-bottom: 10px;
+		}
+		input[type=text] {
+			display: inline-block;
+			align-self: center;
+			width: 100%;
+			padding: 10px;
+			font-size: 1.2em;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 8px;
+			background-color: rgba(255, 255, 255, 0.7);
+			color: #0a0707;
+			box-sizing: border-box;
+			border: 1px solid #fff;
+		}
+		input[type=submit] {
+			position: absolute;
+			background-color: #c86224;
+			color: #fff;
+			padding: 6px;
+			font-size: 1.2em;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			right: 13px;
+            bottom: 7px;
+		}
+		input[type=submit]:hover {
+			background-color: #188318;
+		}
+		.logo {
+			position: absolute;
+	top: 8px;
+    left: 5px;
+    width: 90px;
+    height: 65px;
+    background-image: url(logo-image2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+	</style>
+</head>
+<body>
+	<div class="logo"></div>
+	
+	<div class="container">
+	<form method="POST" action="dbques.php">
+		<h1>Upload Question</h1>
+		
+		<input type="text" name="ques" placeholder="Enter the question"required>
+		<label>Options</label>
+		<input type="text" id="option 1" name='op1' placeholder="Enter your first option">
+		<input type="text" id="option 2" name='op2' placeholder="Enter your secound option">
+        <input type="text" id="option 3" name='op3' placeholder="Enter your third option">
+        <input type="text" id="option 4" name='op4' placeholder="Enter your forth option">
+        <label>Correct Answer</label>
+		<select id="correctAnswer" name="correctAnswer" required>
+            <option value="Option1">Option 1</option>
+            <option value="Option2">Option 2</option>
+            <option value="Option3">Option 3</option>
+            <option value="Option4">Option 4</option>
+        </select>
+		<br> <br>
+		<label>Question Type</label>
+        <input type="radio" name="qtype" value="easy">Easy
+		<input type="radio" name="qtype" value="medium">Medium
+		<input type="radio" name="qtype" value="hard">Hard
+		<label>Question Topic</label>
+		<input type="text" name='topic' placeholder="Enter your topic name">
+		<input type="submit" name="submit" value="Submit">
+	  </form>
+	</div>
+  </body>
+</html>
